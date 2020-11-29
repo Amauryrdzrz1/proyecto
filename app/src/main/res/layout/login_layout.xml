@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/logoSesion"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        app:srcCompat="@drawable/login" />
+
+    <EditText
+        android:id="@+id/loginemail"
+        android:layout_width="300dp"
+        android:drawableLeft="@drawable/user"
+        android:background="#5C00BCD4"
+        android:layout_height="50dp"
+        android:layout_below="@+id/logoSesion"
+        android:layout_marginTop="120dp"
+        android:ems="10"
+        android:layout_centerHorizontal="true"
+        android:textColor="#3F51B5"
+        android:hint="Email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/logincontra"
+        android:layout_width="300dp"
+        android:drawableLeft="@drawable/ic_action_name"
+
+        android:background="#5C00BCD4"
+        android:layout_height="50dp"
+        android:layout_below="@+id/loginemail"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:textColor="#3F51B5"
+        android:inputType="textPassword"
+        android:hint="Password"/>
+
+    <Button
+        android:id="@+id/botonlogin"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logincontra"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="#000000"
+        android:textSize="15sp"
+        android:text="LogIn"
+        app:iconTint="#130303" />
+
+    <TextView
+        android:id="@+id/linkRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/botonlogin"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:text="Crear Cuenta" />
+</RelativeLayout>
