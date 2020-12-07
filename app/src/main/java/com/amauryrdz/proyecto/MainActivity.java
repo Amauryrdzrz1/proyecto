@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         mVolley = com.amauryrdz.proyecto.Volley.getInstance(this.getApplicationContext());
         requestQueue = mVolley.getmResquestQueue();
 
-        /*/crear instancia estatica de la app
+        /*crear instancia estatica de la app
         public static MainActivity getInstance() {
             return mainActivity;
 
