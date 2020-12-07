@@ -27,7 +27,6 @@ public class RegistroActividad extends AppCompatActivity {
     EditText nombreregistro, correoRegistro, AliasRegistro, passwordRegistro;
     private RequestQueue requestQueue;
     private Volley mVolley;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

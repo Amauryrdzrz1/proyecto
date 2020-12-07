@@ -16,7 +16,6 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -27,16 +26,34 @@ public class MainActivity extends AppCompatActivity {
     Button botonlogin;
     private RequestQueue requestQueue;
     private Volley mVolley;
+    //crear variables estaticas de app y administrador de preferencias
+    public static MainActivity mainActivity;
+    public static AdministrarPreferencias administrarPreferencias;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        mainActivity = this;
         loginemail      = (EditText) findViewById(R.id.loginemail);
         logincontra     = (EditText) findViewById(R.id.logincontra);
         linkRegistro    = (TextView) findViewById(R.id.linkRegistro);
         botonlogin      = (Button) findViewById(R.id.botonlogin);
+        mVolley = com.amauryrdz.proyecto.Volley.getInstance(this.getApplicationContext());
+        requestQueue = mVolley.getmResquestQueue();
 
+        /*/crear instancia estatica de la app
+        public static MainActivity getInstance() {
+            return mainActivity;
+
+        }
+        //crear instancia estatica de administrarpreferencias
+        public static AdministrarPreferencias getAdministrarPreferencias() {
+            if(administrarPreferencias == null){
+                administrarPreferencias = new AdministrarPreferencias(getInstance);
+            }
+
+            return administrarPreferencias;
+        }
         linkRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-/*
+        */
         botonlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,6 +90,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(MainActivity.this, bienvenida.class);
                 startActivity(i);
             }
-        });*/
+        });
     }
 }
