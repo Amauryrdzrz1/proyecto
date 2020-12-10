@@ -33,7 +33,7 @@ public class RegistroActividad extends AppCompatActivity {
         setContentView(R.layout.activity_registro_actividad);
         nombreregistro      = (EditText) findViewById(R.id.nombreRegistro);
         correoRegistro      = (EditText) findViewById(R.id.correoRegistro);
-        AliasRegistro       = (EditText) findViewById(R.id.AliasRegistro);
+        //AliasRegistro       = (EditText) findViewById(R.id.AliasRegistro);
         passwordRegistro    = (EditText) findViewById(R.id.passwordRegistro);
         botonregistrar      = (Button) findViewById(R.id.botonregistrar);
         mVolley = Volley.getInstance(this.getApplicationContext());
@@ -41,13 +41,13 @@ public class RegistroActividad extends AppCompatActivity {
         botonregistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "http://192.168.1.163:8000/api/registro";
+                String url = "http://www.cisco16.ml/api/registro";
                 JSONObject registro = new JSONObject();
                 try {
                     registro.put("name", nombreregistro.getText());
                     registro.put("email", correoRegistro.getText());
                     registro.put("password", passwordRegistro.getText());
-                    registro.put("alias", AliasRegistro.getText());
+                    //registro.put("alias", AliasRegistro.getText());
 
                 }catch (JSONException e){
                     e.printStackTrace();
